@@ -1,11 +1,15 @@
+// Importing dependencies
 import { createStore, applyMiddleware, compose, combineReducers, } from "redux";
 import thunk from "redux-thunk";
+// Importing states
 import authReducer from "./auth";
 
+// Combining reducers
 const rootReducers = combineReducers({
     auth: authReducer
 });
 
+// <----For persisting of State---->
 const saveToLocalStorage = (state) => {
     try {
         const serializedState = JSON.stringify(state)
@@ -29,6 +33,7 @@ const loadFromLocalStorage = () => {
 }
 const persistedState = loadFromLocalStorage();
 
+// Creating Store with persisted state and adding redux extendion tool for debugging
 const store = createStore(
     rootReducers,
     persistedState,
@@ -41,7 +46,7 @@ const store = createStore(
 
 store.subscribe(() => {
     saveToLocalStorage(
-        store.getState()
+        store.getState()    // for getting all state from redux
     )
 });
 

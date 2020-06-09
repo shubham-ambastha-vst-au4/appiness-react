@@ -1,20 +1,24 @@
+// Importing packages
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux'
-import { Button, Form, Header, Message } from "semantic-ui-react";
-import login from '../Redux/jsonStore/login.json'
+import { Button, Form, Header, Message } from "semantic-ui-react";   // Importing from CSS library
+import login from '../Redux/jsonStore/login.json'   // importing login details from defined json data
 
 const Login = () => {
 
     const dispatch = useDispatch();
+
+    // Defining local state
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [formError, setFormError] = useState(false);
 
+    // Validating form and giving error if fails
     const handleSubmit = () => {
         if(email !== login.username || password !== login.password ){
             setFormError(true)
         } else {
-            dispatch({
+            dispatch({  // dispatching user information
                 type: "SET_USER",
                 payload: email
             })

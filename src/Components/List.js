@@ -1,7 +1,8 @@
+// Importing packages
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { Table, Container, Header, Icon, Menu, Button } from 'semantic-ui-react'
-import lists from '../Redux/jsonStore/lists.json'
+import { Table, Container, Header, Icon, Menu, Button } from 'semantic-ui-react' // Importing from CSS library
+import lists from '../Redux/jsonStore/lists.json' // importing employees details from defined json data
 
 const List = () => {
 
@@ -9,7 +10,7 @@ const List = () => {
 
     const handleLogout = () => {
         dispatch({
-            type: "LOGOUT_USER"
+            type: "LOGOUT_USER" // dispatching logout
         })
     }
 
@@ -50,6 +51,7 @@ const List = () => {
                     </Table.Row>
                 </Table.Header>
 
+                {/* Mapping over json data and defining tables */}
                 <Table.Body>
                     {lists.map((list, index) => {
                         return (

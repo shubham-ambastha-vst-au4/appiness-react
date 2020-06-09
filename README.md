@@ -1,4 +1,28 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React-App
+
+## Setup and Configuration. 
+
+### Pre-requisites
+
+* node
+
+### Installation
+
+* Install dependencies using npm
+
+    - ```npm install```
+
+### Dependencies Used
+
+* react (^16.13.1)
+* react-dom (^16.13.1)
+* react-redux (^7.2.0)
+* react-router-dom (^5.2.0)
+* react-scripts (3.4.1)
+* redux (^4.0.5)
+* redux-thunk (^2.3.0)
+* semantic-ui-css (^2.4.1)
+* semantic-ui-react (^0.88.2)
 
 ## Available Scripts
 
@@ -12,11 +36,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.<br />
@@ -25,44 +44,38 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Global state management
 
-### `npm run eject`
+- Global state management using [React-Redux](https://github.com/reduxjs/react-redux)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  Take a look at the following files
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  - Providing Store to React app [src/index.js](src/index.js)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Computing and getting state from the redux store using [Redux](https://github.com/reduxjs/redux)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  Take a look at the following files
 
-## Learn More
+  - [src/Redux/reducers/index.js](src/Redux/reducers/index.js)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Design and Style
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Styling components using [Custom CSS](./src/Styles/index.css)
 
-### Code Splitting
+- Reusing components from [Semantic-UI-React](https://github.com/Semantic-Org/Semantic-UI-React)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Routing
 
-### Analyzing the Bundle Size
+- Routing is done using [React-Router-DOM](https://github.com/ReactTraining/react-router)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+    Routes using in this projects are `http://localhost:3000`
 
-### Making a Progressive Web App
+## App entry point
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+- [src/index.js](src/index.js)
 
-### Advanced Configuration
+## Using App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Open `http://localhost:3000` in your browser.
+- Login with predefined credentials.
+- Now see your employees in table.
