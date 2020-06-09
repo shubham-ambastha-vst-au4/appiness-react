@@ -79,3 +79,9 @@ Your app is ready to be deployed!
 - Open `http://localhost:3000` in your browser.
 - Login with predefined credentials.
 - Now see your employees in table.
+
+## Components
+
+- For conditional returning of component [Home](src/Components/Home.js)
+- For Login page [Login](src/Components/Login.js)
+- For employees table [List](src/Components/List.js)
